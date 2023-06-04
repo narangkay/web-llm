@@ -11,14 +11,17 @@ export default {
             exports: 'named',
             format: 'es',
             sourcemap: true,
-            globals: {'ws': 'ws',
-                      'perf_hooks': 'perf_hooks'}
+            globals: { 'ws': 'ws' }
         }
     ],
     plugins: [
-        ignore(["fs", "path", "crypto"]),
+        ignore(["fs", "path", "crypto", "module"]),
         nodeResolve({ browser: true }),
-        commonjs(),
+        commonjs({
+            // dynamicRequireTargets: [
+            // ],
+            ignoreDynamicRequires: true,
+        }),
         typescript({
             rollupCommonJSResolveHack: false,
             clean: true
