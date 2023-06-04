@@ -17,7 +17,7 @@ if [[ -z ${TVM_HOME_SET} ]]; then
     export TVM_HOME="${TVM_HOME:-3rdparty/tvm-unity}"
 fi
 
-cd ${TVM_HOME}/web && echo ${PWD} && make && npm install && npm run build && cd - || { echo 'tvm build failed' ; exit 1; }
+cd ${TVM_HOME}/web && echo ${PWD} && make && npm install && ls node_modules && ls node_modules/rollup && npm run build && cd - || { echo 'tvm build failed' ; exit 1; }
 
 rm -rf tvm_home
 ln -s ${TVM_HOME} tvm_home
