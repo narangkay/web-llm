@@ -2,6 +2,8 @@
 # This file prepares all the necessary dependencies for the web build.
 set -euxo pipefail
 
+echo "Entering prep deps..."
+
 emcc --version
 npm --version
 
