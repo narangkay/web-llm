@@ -26,5 +26,6 @@ export default {
             rollupCommonJSResolveHack: false,
             clean: true
         })
-    ]
+    ],
+    external: ['ws']
 };
