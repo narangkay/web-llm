@@ -11,7 +11,7 @@ export default {
             exports: 'named',
             format: 'es',
             sourcemap: true,
-            // globals: { 'ws': 'ws' }
+            globals: { 'ws': 'ws' }
         }
     ],
     plugins: [
