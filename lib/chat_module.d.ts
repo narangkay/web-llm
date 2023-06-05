@@ -1,4 +1,5 @@
 import { AppConfig } from "./config";
+import { LLMChatPipeline } from "./llm_chat";
 import { InitProgressCallback, ChatInterface, ChatOptions, GenerateProgressCallback } from "./types";
 /**
  * This is the main interface to the chat module.
@@ -34,7 +35,7 @@ export declare class ChatModule implements ChatInterface {
      * Run a decode step to decode the next token.
      */
     decode(): Promise<void>;
-    private getPipeline;
+    getPipeline(): LLMChatPipeline;
     private asyncLoadTokenizer;
 }
 //# sourceMappingURL=chat_module.d.ts.map

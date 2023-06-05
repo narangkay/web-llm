@@ -89,6 +89,14 @@ export class LLMChatPipeline {
     tvm.endScope();
   }
 
+  getConfig(): ChatConfig {
+    return this.config;
+  }
+
+  getConversation(): Conversation {
+    return this.conversation;
+  }
+
   dispose() {
     this.params.dispose();
     this.decoding.dispose();

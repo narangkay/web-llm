@@ -213,7 +213,7 @@ export class ChatModule implements ChatInterface {
     return this.getPipeline().decodeStep();
   }
 
-  private getPipeline(): LLMChatPipeline {
+  getPipeline(): LLMChatPipeline {
     if (this.pipeline === undefined) {
       throw Error("Chat module not yet initialized, did you call chat.reload?");
     }

@@ -1,6 +1,7 @@
 import * as tvmjs from "tvmjs";
 import { Tokenizer } from "@mlc-ai/web-tokenizers";
 import { ChatConfig } from "./config";
+import { Conversation } from "./conversation";
 export declare class LLMChatPipeline {
     private config;
     private tokenizer;
@@ -30,6 +31,8 @@ export declare class LLMChatPipeline {
     private prefillTotalTokens;
     private logger;
     constructor(tvm: tvmjs.Instance, tokenizer: Tokenizer, config: ChatConfig);
+    getConfig(): ChatConfig;
+    getConversation(): Conversation;
     dispose(): void;
     /**
      * Get the current message.
