@@ -14,6 +14,7 @@ export default {
             globals: { 'ws': 'ws' }
         }
     ],
+    inlineDynamicImports: true,
     plugins: [
         ignore(["fs", "path", "crypto", "module"]),
         nodeResolve({ browser: true }),
