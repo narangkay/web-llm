@@ -2,8 +2,6 @@
 # This file prepares all the necessary dependencies for the web build.
 set -euxo pipefail
 
-echo "Entering prep deps..."
-
 emcc --version
 npm --version
 
@@ -17,8 +15,7 @@ if [[ -z ${TVM_HOME_SET} ]]; then
     export TVM_HOME="${TVM_HOME:-3rdparty/tvm-unity}"
 fi
 
-cd ${TVM_HOME}/web && echo ${PWD} && make && npm install && npm run build && cd - || { echo 'tvm build failed' ; exit 1; }
-
+cd ${TVM_HOME}/web && make && npm install && npm run build && cd -
 rm -rf tvm_home
 ln -s ${TVM_HOME} tvm_home
 npm install

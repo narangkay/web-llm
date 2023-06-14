@@ -23,6 +23,7 @@ dist/
 downloads/
 eggs/
 .eggs/
+lib/
 lib64/
 parts/
 sdist/
@@ -319,4 +320,5 @@ gallery/how_to/work_with_microtvm/micro_tvmc.py
 dist
 tvm_home
 node_modules
+lib
 .parcel-cache

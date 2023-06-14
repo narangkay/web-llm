@@ -19,14 +19,11 @@ export default {
         ignore(["fs", "path", "crypto", "module"]),
         nodeResolve({ browser: true }),
         commonjs({
-            // dynamicRequireTargets: [
-            // ],
             ignoreDynamicRequires: true,
         }),
         typescript({
             rollupCommonJSResolveHack: false,
             clean: true
         })
-    ],
-    // external: ['ws']
+    ]
 };
